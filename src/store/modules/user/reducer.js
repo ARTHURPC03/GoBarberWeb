@@ -9,7 +9,6 @@ export default function user(state = INITAL_STATE, action) {
     case '@auth/SIGN_IN_SUCCESS':
       return produce(state, (draft) => {
         draft.profile = action.payload.user
-        draft.signed = true
       })
     default:
       return state
